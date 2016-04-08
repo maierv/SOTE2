@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+			<meta charset="ISO-8859-1">
+			<script type="text/javascript">
+				funcition einfügen_Text(){
+				var text = document.getElementById("einfügen").value;
+				
+				var knoten = document.createElement("li");
+				var newText = document.createTextNode(text);
+				
+				knoten.appendChild(newText);
+				}
+			</script)
+</head>
+<body>
+	<form>
+	<p>Nachricht: </p>
+	<p><textarea name="nachricht" cols="50" rosw="10">Text eintragen</textarea></p>
+	<p><button type="button" onclick=""id="einfügen">Text einfügen</button>
+	</form>
+	
+	</body>
+</html>
