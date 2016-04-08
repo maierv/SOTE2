@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>JSON</title>
+	<script type="text/script">
+		function einfuegen_Tabelle(){
+		var data = document.getElementByID("einfuegen").value;
+		
+		var knoten = document.createElement("table");
+		var newtable = document.createTextNode(data);
+
+		knoten.appendChild(newtable);
+		document.getElementById("table").appendChild(knoten);
+	}
+
+			
+
+	var text ={"list" : { 
+			   "meta" : { 
+			   "type" : "resource-list",
+			   "start" : 0,
+			   "count" : 173
+			 },
+			"resources" : [ 
+			{
+			"resource" : { 
+			"classname" : "Quote",
+			"fields" : { 
+			"name" : "USD/KRW",
+			"price" : "1153.244995",
+			"symbol" : "KRW=X",
+			"ts" : "1460118046",
+			"type" : "currency",
+			"utctime" : "2016-04-08T12:20:46+0000",
+			"volume" : "0"
+			}
+			}
+			}]
+		}
+		}
+	}
+
+	var resources = text.list.resources;
+	var result = "";
+	
+	for(r in resources){
+	result += resources[r].resource.fields.name + " - " + resources[r].resource.fields.price +
+	" - " + resources[r].resource.fields.symbol}
+	
+
+	alert("Test" + result);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+
+</html>

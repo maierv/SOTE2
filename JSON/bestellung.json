@@ -1,0 +1,20 @@
+{
+	"bnummer": "A123",
+	"bkdnr": "GER",
+	"vorname": "Hans-Ulrich",
+	"nachname": "Graf",
+	"position:"{
+		"bstposition": 1,
+		"produkt": {
+			"bnummer": "A122",
+			"name": "Fön",
+			"preis": 23,75
+			}
+		"bstposition": 2,
+		"produkt": {
+			"bnummer": "A122",
+			"name": "Tablet",
+			"preis": 259
+			}
+	}
+}
