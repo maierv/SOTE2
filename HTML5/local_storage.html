@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<title>Local-Storage</title>
+	
+	<script type="text/javascript">
+	
+	
+	function ausgeben(){
+		var feld1 = document.getElmentById("f1").value;
+		var feld2 = document.getElementById("f2").value;
+		
+		document.getElementById("li1").innerHTML = feld1;
+		document.getElementById("li2").innerHTML = feld2;
+	}
+	</script>
+	</head>
+
+<body>
+	<form action="local_storage.html" method="get">
+		<p><input type="text" name="feld1" id="f1"></p>
+		<p><input type="text" name="feld2" id="f2"></p>
+		
+		<ul id= "uli" name="uli">
+			<li id="li1">Inhalt Feld 1 </li>
+			<li id="li2">Inhalt Feld 2 </li>
+		
+		</ul>
+		
+		<p><input type="submit" name="speichern" value="speichern"></p>
+		<p><input type="submit" onclick="ausgeben()"name="ausgabe" value="ausgeben">
+	</form>
+
+
+	<script type="text/javascript">
+	
+	if(typeof(Storage) !== "undefined"){
+		localStorage.setItem("feld1", document.getElementById('f1').value);
+		localStorage.setItem("feld2", document.getElementById('f2').value);
+		document.getElementById("f1").innerHTML = localStorage.getItem("f1");
+		document.getElementById("f2").innerHTML = localStorage.getItem("f2");
+		
+	} else {
+		document.getElementById("f1").innerHTML =
+			"Sorry, your Browser does not support Web Storage ...";
+		
+	}
+	
+	
+	
+	
+	</script>
+</body>
+	
+
+	
+</html>

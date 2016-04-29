@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="ISO-8859-1">
+		<title>Geolocation</title>
+
+	<script type="text/javascript" src="./jquery-2.2.3.js">
+	
+	</script>
+	
+	<script>
+	
+	
+	function getLocation(){
+		if(navigator.geolocation){
+			var x= document.getElementById("geo");
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+		else {
+			x.innerHTML="Dein Standort kann nicht ermittelt werden.";
+		}
+		
+		function showPosition(position){
+			x.innerHTML ="Latitude: " +
+			position.coords.latitude +
+			"<br>Longitude: " +
+			position.coords.longitude;
+		}
+	}
+
+		</script>
+
+</head>
+<body>
+	<h1>Geolocation</h1>
+	<p>Ich befinde mich... <p>
+	<input type="button" onclick="getLocation()" name="geo" value="Hier!!">
+	
+	<p id="geo"></p>
+	
+	
+</body>
+</html>

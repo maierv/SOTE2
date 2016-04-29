@@ -4,15 +4,15 @@
 	<meta charset="ISO-8859-1">
 	<title>JSON</title>
 	<script type="text/script">
-		function einfuegen_Tabelle(){
-		var data = document.getElementByID("einfuegen").value;
 		
-		var knoten = document.createElement("table");
-		var newtable = document.createTextNode(data);
+	$(document).ready(function(){
+			$("#t1").click
+		
+		function addTable(){
+			$("table").html();
+			
+			$("t2").append("tr");
 
-		knoten.appendChild(newtable);
-		document.getElementById("table").appendChild(knoten);
-	}
 
 			
 
@@ -42,19 +42,24 @@
 	}
 
 	var resources = text.list.resources;
-	var result = "";
-	
-	for(r in resources){
-	result += resources[r].resource.fields.name + " - " + resources[r].resource.fields.price +
-	" - " + resources[r].resource.fields.symbol}
 	
 
-	alert("Test" + result);
+	for(r in resources){
+	<tr><td>resources[r].resource.fields.name + " - " </td> <td>+ resources[r].resource.fields.price +
+	" - " </td> <td>+ resources[r].resource.fields.symbol</td></tr>
+	}
 
 
 	</script>
 </head>
 <body>
+
+	<table id="t1">
+	<tr>
+		<th>Name</th><th>Price</th><th>Symbol</th>
+	</tr id="t2">	
+	</table>
+	
 
 </body>
 
